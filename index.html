@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Giveaway Flow</title>
-<link rel="stylesheet" href="style.css">
+  <!-- ... other head elements ... -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Page 1: Introduction -->
-<div id="page1" class="page active">
-  <h2>iPhone 14 Plus Giveaway</h2>
-  <p>Complete the steps to join the giveaway.</p>
-  <button class="button" onclick="initJoinProcess()">Join</button>
-</div>
+  <!-- Page 1: Introduction -->
+  <div id="page1" class="page active">
+    <h2>iPhone 14 Plus Giveaway</h2>
+    <p>Complete the steps to join the giveaway.</p>
+    <button class="button" onclick="initJoinProcess()">Join</button>
+  </div>
 
-<!-- Page 2: Details and Form -->
-<div id="page2" class="page">
-  <h2>Enter Your Details</h2>
-  <input type="text" placeholder="Full Name" required />
-  <input type="email" placeholder="Email" required />
-  <button class="button" onclick="showPage(3)">Next</button>
-</div>
+  <!-- Page 2: Details and Form -->
+  <div id="page2" class="page">
+    <!-- ... form fields ... -->
+    <button class="button" onclick="showPage(3)">Next</button>
+  </div>
 
-<!-- Page 3: Placeholder for Content Locker -->
-<div id="page3" class="page">
-  <h2>Complete an Offer</h2>
-  <p>Choose an offer below and follow the instructions to unlock the giveaway.</p>
-  <!-- The CPA content locker script will be loaded here by the JavaScript function -->
-  <button class="button" onclick="showPage(4)">I've completed an offer</button>
-</div>
+  <!-- Page 3: Placeholder for Content Locker -->
+  <div id="page3" class="page">
+    <h2>Complete an Offer</h2>
+    <p>Choose an offer below and follow the instructions to unlock the giveaway.</p>
+    <!-- The CPA content locker script will be loaded by the JavaScript function -->
+    <button class="button" onclick="showPage(4)">I've completed an offer</button>
+  </div>
 
-<!-- Page 4: Final Confirmation -->
-<div id="page4" class="page">
-  <h2>Thank you!</h2>
-  <p>You have joined the giveaway. Good luck!</p>
-  <button class="button" onclick="showPage(1)">Start Over</button>
-</div>
+  <!-- Page 4: Final Confirmation -->
+  <div id="page4" class="page">
+    <!-- ... final message ... -->
+    <button class="button" onclick="showPage(1)">Start Over</button>
+  </div>
 
-<!-- Link to external JavaScript file -->
-<script src="script.js"></script>
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
 
 </body>
 </html>
