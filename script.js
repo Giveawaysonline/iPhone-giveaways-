@@ -1,18 +1,5 @@
-function showPage(pageNumber) {
-  var pages = document.getElementsByClassName('page');
-  for (var i = 0; i < pages.length; i++) {
-    pages[i].style.display = 'none';
-  }
-  var currentPage = document.getElementById('page' + pageNumber);
-  currentPage.style.display = 'block';
-  
-  if (pageNumber === 3) {
-    loadCPAScript();
-  }
-}
-
 function loadCPAScript() {
-  if (!document.getElementById('cpaScript')) {
+  if (!document.getElementById('cpaScript') && document.readyState === 'complete') {
     var script = document.createElement('script');
     script.id = 'cpaScript';
     script.type = 'text/javascript';
@@ -21,6 +8,9 @@ function loadCPAScript() {
   }
 }
 
-function initJoinProcess() {
-  showPage(2);
-}
+document.addEventListener('DOMContentLoaded', function() {
+  var page3 = document.getElementById('page3');
+  if (page3.style.display === 'block') {
+    loadCPAScript();
+  }
+});
